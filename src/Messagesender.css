@@ -1,0 +1,67 @@
+.messagesender{
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    background: white;
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: 0px 5px 7px -7px rgba(0,0,0,0.75);
+}
+ .messagesender__top{
+     display: flex;
+     border-bottom: 1px solid #eff2f5;
+     padding: 15px;
+ }
+ .messagesender__top form{
+     flex: 1;
+     display: flex;
+
+ }
+ .messagesender__top form input{
+    outline-width: 0;
+    padding: 5px 20px;
+    margin: 0px 10px;
+    border-radius: 999px;
+    border: none;
+    background-color: #eff2f5;
+
+ }
+ /* fix me */
+ .messagesender__top form button{
+     display: none;
+ }
+
+
+ .messagesender__input{
+     flex: 1;
+ }
+ .messagesender__bottom{
+     display: flex;
+     justify-content: space-evenly;
+ }
+ .messagesender__option{
+     display: flex;
+     padding: 20px;
+     align-items: center;
+color: gray;
+margin: 5px;
+
+ }
+ .messagesender__option h3{
+     font-size: medium;
+     margin-left: 10px;
+cursor: pointer;
+
+ }
+ .messagesender__option:hover{
+     background-color: #eff2f5;
+     border-radius: 20px;
+ }
+
+
+
+ /* @media (max-width: 700px){
+     .messagesender__top form button{
+         display: inline;
+     }
+ } */
