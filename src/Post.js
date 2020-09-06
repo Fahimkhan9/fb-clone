@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Post.css'
 import {Avatar} from "@material-ui/core"
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
@@ -7,6 +7,14 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import NearMeIcon from '@material-ui/icons/NearMe';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 function Post({profilePic,image,username,timestamp,message}) {
+    const [likeColor,setLikeColor]  = useState('') 
+    const [likeCount,setLikeCount] = useState(0)
+
+const handleLike = () => {
+    setLikeCount(pre => likeCount ? pre -1 : pre +1 )
+    setLikeColor(pre => likeColor ? '' : "primary")
+}
+
     return (
         <div  className="post">
             <div className="post__top">
@@ -27,8 +35,9 @@ function Post({profilePic,image,username,timestamp,message}) {
                 <img  src={image} alt=""/>
             </div>
             <div className="post__options">
-<div className="post__option">
-<ThumbUpIcon/>
+<div className="post__option" onClick={handleLike}>
+    <b style={{marginRight: '5px'}}>{likeCount}</b>
+<ThumbUpIcon  color={likeColor} />
 <p>Like</p>
 </div>
 <div className="post__option">
